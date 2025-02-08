@@ -36,9 +36,12 @@ services:
       - LOAD_EX=n
       - EXECUTOR=Local
       - AIRFLOW__SMTP__SMTP_HOST=smtp.gmail.com
-      - AIRFLOW__SMTP__SMTP_USER=wei217835@gmail.com
-      - AIRFLOW__SMTP__SMTP_PASSWORD=fqthzhxggrzaqxmi
+      # Replace with your gmail
+      - AIRFLOW__SMTP__SMTP_USER=example@gmail.com
+      # Set up app password with gmail (https://www.youtube.com/watch?v=2D8jpws-4hA)
+      - AIRFLOW__SMTP__SMTP_PASSWORD=replacewithyourpassword
       - AIRFLOW__SMTP__SMTP_PORT=587
+      # App Name (https://www.youtube.com/watch?v=2D8jpws-4hA)
       - AIRFLOW__SMTP__SMTP_MAIL_FROM=Airflow
     volumes:
       - ./dags:/usr/local/airflow/dags
