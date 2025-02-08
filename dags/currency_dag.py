@@ -27,7 +27,7 @@ def send_email(**kwargs):
     # Send the email
     email_operator = EmailOperator(
         task_id='send_email',
-        to='lwz1030@gmail.com',
+        to='example@gmail.com',  #Replace with target email, use list if more than one target user
         subject='Weekly report generated',
         html_content=""" <h1>Congratulations! Your currency reports are ready.</h1> """,
         files=[file, '/usr/local/airflow/store_files_airflow/currency_rates_graph.png'],  
